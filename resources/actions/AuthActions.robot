@@ -13,13 +13,17 @@ Go To Login Page
     Go to       ${BASEURL}
     Wait For Elements State      css=.login-form     visible     5
 
-
-
-
 Fill Credentials        
-    [Arguments]     ${user}
+    [Arguments]             ${user}
+    Fill Input Email        ${user}
+    Fill Input Password     ${user}
 
+Fill Input Email        
+    [Arguments]     ${user}
     Fill Text       ${INPUT_EMAIL}      ${user}[email]
+
+Fill Input Password
+    [Arguments]     ${user}    
     Fill Text       ${INPUT_PASS}       ${user}[password]
 
 Submit Credentials

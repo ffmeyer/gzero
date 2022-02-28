@@ -8,8 +8,8 @@
 #robot -d ./logs tests
 #executando tasks sem gerar nenhum tipo de relatorio (executor do limpador de banco de dados)
 #robot -l NONE -o NONE -r NONE tasks/Delorean.robot
+#robot -d ./logs tests
+#robot -d ./logs -i i_email tests/Login.robot
+#robot -d ./logs tests/Login.robot
 robot -l NONE -o NONE -r NONE tasks/Delorean.robot
-#robot -d ./logs -i i_pass tests/Signup.robot
-#obot -d ./logs tests/Signup.robot
-robot -d ./logs -i i_email tests/Login.robot
-#obot -d ./logs tests/Login.robot
+robot -d ./logs -i challenger tests/Login.robot
