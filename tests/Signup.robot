@@ -11,7 +11,7 @@ Test Teardown   Finish session
 *Test Cases*
 Register a new user
 
-    ${user}     Factory User
+    ${user}     Factory User        faker
 
     Go To Signup Form
     Fill Signup Form        ${user}
@@ -21,7 +21,7 @@ Register a new user
 Duplicate user
     [Tags]      attemp_signup
 
-    ${user}                     Factory User
+    ${user}                     Factory User        faker
 
     Add User From Database      ${user} 
 
@@ -33,7 +33,7 @@ Duplicate user
 Wrong Email
     [Tags]      attemp_signup
 
-    ${user}                     Factory Wrong Email
+    ${user}                     Factory User        wrong_email
 
     Go To Signup Form
     Fill Signup Form            ${user}

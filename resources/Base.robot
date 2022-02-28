@@ -7,7 +7,9 @@ Library     Collections
 
 Resource    actions/_SharedActions.robot
 Resource    actions/AuthActions.robot
+Resource    actions/GeekActions.robot
 Resource    actions/SignupActions.robot
+
 Resource    Helpers.robot
 
 *Variables*

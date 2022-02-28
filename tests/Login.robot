@@ -12,7 +12,7 @@ Test Teardown   Finish session
 User Login
     [Tags]  chal_errors
 
-    ${user}         Factory User Login
+    ${user}         Factory User        login
 
     Go To Login Page
     Fill Credentials        ${user}
