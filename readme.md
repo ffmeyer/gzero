@@ -11,13 +11,21 @@ front end: http://getgeeks-ffmeyer.herokuapp.com/
 Para rodar os testes, rode o seguinte comando
 
 ```bash
+  Para uso em desenvolvimento
   robot -d ./logs tests
 ```
 
+```bash
+  Para execução de testes CLI
+  robot -d ./logs -v BROWSER:chromium -v HEADLESS:True tests
+```
 
-## Autores
-
-- [@Felipe Meyer](https://www.github.com/ffmeyer   )
+```bash
+  Para execução de testes em paralelo (pabot)
+  pabot -d ./logs -v BROWSER:chromium -v HEADLESS:True tests
+```
+### Sobre o Pabot e performance de testes em paralelo
+obs.: Usando ambiente docker / nuvem, é possivel que tenha uma performance inferior, de acordo com a quantidade disponivel de cores para ser utilizado. caso a maquina que executa os testes tenha somente um core, não haverá paralelismo, não se beneficiando da ferramenta pabot.
 
 ## Pacotes (pypi) 
 
@@ -26,3 +34,8 @@ Para rodar os testes, rode o seguinte comando
 - [psycopg2](https://pypi.org/project/psycopg2/)
 - [robotframework-browser](https://pypi.org/project/robotframework-browser/)
 - [robotframework-databaselibrary](https://pypi.org/project/robotframework-databaselibrary/)
+- [robotframework-pabot](https://pypi.org/project/robotframework-pabot/)
+
+## Autores
+
+- [@Felipe Meyer](https://www.github.com/ffmeyer)

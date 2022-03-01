@@ -3,13 +3,13 @@ Documentation       Base test
 
 Library     Browser
 Library     factories/Users.py
+Library     Utils.py
 Library     Collections
 
 Resource    actions/_SharedActions.robot
 Resource    actions/AuthActions.robot
 Resource    actions/GeekActions.robot
 Resource    actions/SignupActions.robot
-
 Resource    Helpers.robot
 
 *Variables*
@@ -17,8 +17,11 @@ ${BASEURL}      https://getgeeks-ffmeyer.herokuapp.com
 
 *Keywords*
 Start session 
-    New Browser     chromium        headless=False      slowMo=00:00:00.5
-    New Page        ${BASEURL}
+    #New Browser             chromium        headless=False      slowMo=00:00:00.5
+    New Browser             ${BROWSER}        headless=${HEADLESS}      slowMo=00:00:00
+    New Page                ${BASEURL}
+    Set Viewport Size       1280        768
 
-Finish session
-    Take Screenshot
+After Test                  
+    ${shot_name}        Screenshot Name
+    Take Screenshot     fullPage=True       filename=${shot_name}

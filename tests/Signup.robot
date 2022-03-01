@@ -1,16 +1,16 @@
 *Settings*
-Documentation       Sigup Test Suite 
+Documentation       Signup Test Suite 
 
 Resource        ${EXECDIR}/resources/base.robot
 
 
 
 Test Setup      Start Session
-Test Teardown   Finish session
+Test Teardown   After Test
 
 *Test Cases*
 Register a new user
-
+    [Tags]      smoke
     ${user}     Factory User        faker
 
     Go To Signup Form

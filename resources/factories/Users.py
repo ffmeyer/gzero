@@ -21,13 +21,6 @@ def factory_user(target):
             "lastname": fake.last_name(),
             "email": "email&hotmail.com",
             "password": "pwd123"        
-            },
-
-        'wrong_email': {
-            "name": fake.first_name(),
-            "lastname": fake.last_name(),
-            "email": "email&hotmail.com",
-            "password": "pwd123"        
             }, 
 
         'login': {
@@ -50,17 +43,17 @@ def factory_user(target):
                 'cost': '100'
                 }
             },
-        'short_desc': {
-            "name": 'Peter',
-            "lastname": 'Jordan',
-            "email": "peter@einerd.com",
-            "password": "pwd123",
-            "geek_profile": {
-                'whats': '21999999999',
-                'desc': 'Formato seu pc',
-                'printer_repair': 'Não',
-                'work': 'Ambos',
-                'cost': '200'
+        'attempt_be_geek': {
+        "name": 'Dio',
+        "lastname": 'Linux',
+        "email": "dio@linux.com",
+        "password": "pwd123",
+        "geek_profile": {
+            'whats': '11999999999',
+            'desc': 'Instalo Distros Ubuntu, Debian, ElementaryOS,  PopOS,  Linux Mint, Kurumin, Mandrake, Connectiva, Fedora, Redhat, Cent OS, Slackware, Gentoo, Archlinux, Kubuntu, Xubuntu, Suse, Mandriva, Edubuntu, KateOS, Sabayon Linux, Manjaro, Big Linux, ZorinOS, Nitrux',
+            'printer_repair': 'Não',
+            'work': 'Ambos',
+            'cost': '150'
                 }
             }
 

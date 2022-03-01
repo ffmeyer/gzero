@@ -1,5 +1,5 @@
 *Settings*
-Documentation       Sigup Test Suite 
+Documentation       Trabahlando com listas robot framework
 
 Resource        ${EXECDIR}/resources/base.robot
 

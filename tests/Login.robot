@@ -5,13 +5,12 @@ Resource        ${EXECDIR}/resources/Base.robot
 
 
 Test Setup      Start session 
-Test Teardown   Finish session
+Test Teardown   After Test
 
 *Test Cases*
 
 User Login
-    [Tags]  chal_errors
-
+    [Tags]      smoke
     ${user}         Factory User        login
 
     Go To Login Page
