@@ -1,8 +1,6 @@
 *Settings*
 Documentation       Signup Actions
 
-#Library     Collections 
-
 *Keywords*
 Go To Signup Form
 

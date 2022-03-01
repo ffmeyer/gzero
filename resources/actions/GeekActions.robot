@@ -15,6 +15,7 @@ Fill Geek Form
     Fill Text           id=whatsapp                         ${geek_profile}[whats]
     Fill Text           id=desc                             ${geek_profile}[desc]
     
+    #resolve o problema do select (combobox) vazio quando se passa um valor ${EMPTY}
     IF      '${geek_profile}[printer_repair]'
         Select Options By   id=printer_repair       text        ${geek_profile}[printer_repair]
     END
@@ -29,7 +30,7 @@ Submit Geek Form
     Click               css=button >> text=Quero ser um Geek
 
 Geek Form Should Be Sucess
-    ${expected_message}     Set Variable        Seu cadastro está na nossa lista de geeks. Agora é só ficar de olho no seu WhatsApp.        
+    ${expected_message}         Set Variable                            Seu cadastro está na nossa lista de geeks. Agora é só ficar de olho no seu WhatsApp.        
 
     Wait For Elements State     css=p >> text=${expected_message}       visible     5
 

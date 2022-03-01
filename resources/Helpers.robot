@@ -12,7 +12,6 @@ Add User From Database
     Insert User     ${user}    
     Disconnect From Database
 
-
 *Keywords*
 Do Login
     [Arguments]     ${user}
