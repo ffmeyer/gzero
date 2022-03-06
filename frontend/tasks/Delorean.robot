@@ -9,6 +9,6 @@ Resource        ${EXECDIR}/resources/Database.robot
 Back To The Past
 
     Connect To Postgres
-    #Reset Env
-    #Users Seed
+    Reset Env
+    Users Seed
     Disconnect From Database
