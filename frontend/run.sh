@@ -15,7 +15,7 @@
 #robot -l NONE -o NONE -r NONE tasks/Delorean.robot
 
 robot -l NONE -o NONE -r NONE tasks/Delorean.robot
-robot -d ./logs -i theOne -v BROWSER:chromium -v HEADLESS:False tests
+pabot -x xunit.xml -d ./logs -v BROWSER:chromium -v HEADLESS:True -e smoke tests
 #pabot -d ./logs -i smoke -v BROWSER:chromium -v HEADLESS:true tests
 
 #workaround para resolver problema dos reports sem imagem (sha1 para nomes de arquivo)
