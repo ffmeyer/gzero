@@ -6,6 +6,7 @@ Resource        ${EXECDIR}/resources/Base.robot
 *Test Cases*
 Be a Geek
 
+
     #esse usuario eh um cliente comum
     ${user}             Factory Be Geek
     Remove User         ${user}
@@ -46,3 +47,26 @@ Be a Geek
     
     Should Be Equal As Strings      None                    ${response.json()}[avatar]
     Should Be Equal As Strings      True                    ${response.json()}[is_geek]
+
+
+
+
+
+
+
+
+
+
+
+Get Geeks List
+
+    ${user}             Factory Search For Geeks
+    POST User           ${user}
+    ${token}            Get Token       ${user}
+
+    ${response}         GET Geeks       ${token}
+    Status Should Be    200             ${response}
+
+
+    ${total}            Get Length      ${response.json()}[Geeks]
+    Should Be True       ${total} > 0
