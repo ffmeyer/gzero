@@ -36,6 +36,6 @@ jobs:
         path: backend/logs
     - name: Test Reporter  
       uses: dorny/test-reporter@v1.5.0
-      with: API Test Result
-      path: backend/logs/xunit.xml
-      reporter: java-junit
+        with: API Test Result
+        path: backend/logs/xunit.xml
+        reporter: java-junit
