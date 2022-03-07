@@ -59,14 +59,26 @@ Be a Geek
 
 
 Get Geeks List
+    [Tags]      temp
+    ${data}             Factory Search For Geeks
 
-    ${user}             Factory Search For Geeks
-    POST User           ${user}
-    ${token}            Get Token       ${user}
+    #retirando individualmente de cada geek do dicionario para insercao no ambiente (3 geeks)
+    FOR     ${geek}     IN              @{data}[geeks]    
+        POST User       ${geek}  
+        ${token}        Get Token       ${geek}
+    
+        POST Geek       ${token}        ${geek}[geek_profile]
 
+    END
+    #peter quill, o buscardor de geeks
+    POST User           ${data}[user]
+    
+    ${token}            Get Token       ${data}[user]
+    
     ${response}         GET Geeks       ${token}
     Status Should Be    200             ${response}
-
-
+    
+    
     ${total}            Get Length      ${response.json()}[Geeks]
     Should Be True       ${total} > 0
+
