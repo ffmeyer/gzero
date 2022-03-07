@@ -59,7 +59,6 @@ Be a Geek
 
 
 Get Geeks List
-    [Tags]      temp
     ${data}             Factory Search For Geeks
 
     #retirando individualmente de cada geek do dicionario para insercao no ambiente (3 geeks)
