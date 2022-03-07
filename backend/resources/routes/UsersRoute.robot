@@ -1,8 +1,5 @@
 *Settings*
-
-Documentation       Sessions route
-
-*Variables*
+Documentation       Users route
 
 *Keywords*
 POST User
