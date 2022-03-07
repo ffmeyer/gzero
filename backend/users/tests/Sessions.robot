@@ -35,7 +35,7 @@ User Session
     Should Be Equal         ${expected_size}        ${size} 
     Should Be Equal         10d                     ${response.json()}[expires_in] 
 
-Should Not Get token
+Should Not Get Token
     [Template]      Attempt Post Session
     
     ${inv_pass}         401     Unauthorized
