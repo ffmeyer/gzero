@@ -48,16 +48,6 @@ Be a Geek
     Should Be Equal As Strings      None                    ${response.json()}[avatar]
     Should Be Equal As Strings      True                    ${response.json()}[is_geek]
 
-
-
-
-
-
-
-
-
-
-
 Get Geeks List
     ${data}             Factory Search For Geeks
 
