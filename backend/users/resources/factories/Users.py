@@ -14,12 +14,35 @@ def factory_get_user():
         "password": "pwd123"
     } 
 
+def factory_update_user():
+
+    email = 'papito@qaninja.com.br'
+
+    return {
+        'before': {
+            'name': 'Papito Fernando', 
+            'email': email,
+            'password': 'pwd123'
+
+        },
+        'after': {
+            'name': 'Fernando Papito', 
+            'email': email,
+            'whatsapp': '11999999999',
+            'avatar': 'https://avatars.githubusercontent.com/u/11590362'
+            }
+        }
+
+    
+
+    
+
 def factory_remove_user():
     return {
         "name": "Thaddeus Ross",
         "email": "Stacy@gmail.com",
         "password": "pwd123"
-    } 
+    }
 
 
 def factory_user_session(target):
