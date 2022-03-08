@@ -1,7 +1,7 @@
 *Settings*
 Documentation       Signup Test Suite 
 
-Resource        ${EXECDIR}/resources/base.robot
+Resource        ${EXECDIR}/resources/Base.robot
 
 
 
