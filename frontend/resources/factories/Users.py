@@ -92,10 +92,14 @@ def factory_user(target):
         'name': 'Peter',
         'lastname': 'Parker',
         'email': 'peter@oscorp.com',
-        'password': 'pwd123'
-        
+        'password': 'pwd123',
+        'geek_profile': {
+                'whatsapp': '21999991002',
+                'desc': 'Faco instalacao de distribuicoes linux no seu PC X86 ou X64 com processadores intel ou AMD',
+                'printer_repair': 'Não',
+                'work': 'Remoto',
+                'cost': '200'
+                }        
             }
-
-
     }
     return data[target]
