@@ -17,11 +17,9 @@ ${BASEURL}      https://getgeeks-ffmeyer.herokuapp.com
 
 *Keywords*
 Start session 
-    #New Browser             chromium        headless=False      slowMo=00:00:00.5
-    #${context}              New Context         bypassCSP=True
-    New Browser             ${BROWSER}          headless=${HEADLESS}      slowMo=00:00:00
-    New Context             bypassCSP=True
-    New Page                ${BASEURL}
+    New Browser             ${BROWSER}        headless=${HEADLESS}      slowMo=00:00:00
+    New Page                ${BASE_URL}
+    Set Viewport Size       1280     768
     
 
 After Test                  
