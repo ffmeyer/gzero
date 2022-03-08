@@ -5,12 +5,15 @@ Library     Browser
 Library     factories/Users.py
 Library     Utils.py
 Library     Collections
+Library     String
+
 
 Resource    actions/_SharedActions.robot
 Resource    actions/AuthActions.robot
 Resource    actions/GeekActions.robot
 Resource    actions/SignupActions.robot
 Resource    Helpers.robot
+Resource    Services.robot
 
 *Variables*
 ${BASEURL}      https://getgeeks-ffmeyer.herokuapp.com
@@ -25,3 +28,4 @@ Start session
 After Test                  
     ${shot_name}        Screenshot Name
     Take Screenshot     fullPage=True       filename=${shot_name}
+    
