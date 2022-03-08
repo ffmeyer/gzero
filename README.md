@@ -32,6 +32,8 @@ obs.: Usando ambiente docker / nuvem, é possivel que tenha uma performance infe
 - [bcrypt](https://pypi.org/project/bcrypt/)
 - [Faker](https://pypi.org/project/Faker/)
 - [psycopg2](https://pypi.org/project/psycopg2/)
+- [requests](https://pypi.org/project/requests/)
+- [robotframework](https://pypi.org/project/robotframework/)
 - [robotframework-browser](https://pypi.org/project/robotframework-browser/)
 - [robotframework-databaselibrary](https://pypi.org/project/robotframework-databaselibrary/)
 - [robotframework-pabot](https://pypi.org/project/robotframework-pabot/)
