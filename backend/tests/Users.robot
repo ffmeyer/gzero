@@ -9,7 +9,7 @@ Add new User
 
 
     ${user}      Factory New User
-    Remove User     ${user}    
+    Remove User     ${user}
 
     ${response}         POST User       ${user}
     Status Should Be    201             ${response}
@@ -21,7 +21,7 @@ Add new User
 Get User Data
     ${user}         Factory Get User
     POST User       ${user}
-    
+
     ${token}                Get Token       ${user}
     ${response}             GET User        ${token}
     Status Should Be        200     ${response}
@@ -38,7 +38,7 @@ Remove user
 
     ${user}         Factory Remove User
     POST User       ${user}
-    
+
     ${token}                Get Token       ${user}
     ${response}             DELETE User     ${token}
     Status Should Be        204             ${response}
@@ -49,14 +49,14 @@ Remove user
 
 
 
-Update a user    
+Update a user
     ${user}                 Factory Update User
 
     POST User               ${user}[before]
     ${token}                Get Token       ${user}[before]
 
     ${response}             Put User        ${token}        ${user}[after]
-    
+
     ${response}             GET User        ${token}
 
     Should Be Equal As Strings      ${user}[after][name]            ${response.json()}[name]

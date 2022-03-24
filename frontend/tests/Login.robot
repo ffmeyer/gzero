@@ -1,6 +1,9 @@
 *Settings*
 Documentation       Login Test suite
 
+*** Variables ***
+${EXECDIR}        
+
 Resource        ${EXECDIR}/resources/Base.robot
 
 
