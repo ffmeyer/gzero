@@ -3,7 +3,7 @@ Documentation       Geek Actions
 
 *Keywords*
 Go To Geek Form
-    Click                       css=a[href="/be-geek"] >> text=Seja um Geek    
+    Click                       css=a[href="/be-geek"] >> text=Seja um Geek
     Wait For Elements State     css=.be-geek-form     visible     5
 
 Go To Geeks
@@ -20,12 +20,12 @@ Fill Geek Form
 
     Fill Text           id=whatsapp                         ${geek_profile}[whats]
     Fill Text           id=desc                             ${geek_profile}[desc]
-    
+
     #resolve o problema do select (combobox) vazio quando se passa um valor ${EMPTY}
     IF      '${geek_profile}[printer_repair]'
         Select Options By   id=printer_repair       text        ${geek_profile}[printer_repair]
     END
-    
+
     IF      '${geek_profile}[work]'
         Select Options By   id=work                 text        ${geek_profile}[work]
     END
@@ -51,9 +51,9 @@ Submit Search Form
 
 
 Geek Form Should Be Success
-    ${expected_message}         Set Variable                            Seu cadastro está na nossa lista de geeks. Agora é só ficar de olho no seu WhatsApp.        
+    ${expected_message}         Set Variable                            Seu cadastro está na nossa lista de geeks. Agora é só ficar de olho no seu WhatsApp.
 
-    Wait For Elements State     css=p >> text=${expected_message}       visible     5
+    Wait For Elements State     css=p >> text=${expected_message}       visible     10
 
 
 Reset Geek Form
@@ -80,6 +80,6 @@ Alien Icon Should Be Visible
     Get Text        ${target_geek}   contains        👽
 
 
-Geek Not Found    
+Geek Not Found
     Wait For Elements State      css=.search-not-found p >> text=Não encontramos Geeks com o(s) termo(s) informado na busca!
     ...         visible     5
