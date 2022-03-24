@@ -1,7 +1,8 @@
 
 # BOOT Camp Gravidade Zero QA ninja
 
-Automação de testes em Python / RobotFramework / Playwright
+Automação de testes WEB e API em Python / RobotFramework / Playwright.
+
 
 frontend: http://getgeeks-ffmeyer.herokuapp.com/
 
